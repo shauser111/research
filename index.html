@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scott R. Hauser — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --rule: #b5935a;
+    --muted: #5a5a5a;
+    --light: #f5f2ee;
+    --accent: #2c4a6e;
+    --page: #fdfbf8;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    background: var(--light);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+
+  .page {
+    background: var(--page);
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3.5rem 4rem;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+  }
+
+  /* ── Header ── */
+  header {
+    text-align: center;
+    padding-bottom: 1.8rem;
+    border-bottom: 2px solid var(--rule);
+    margin-bottom: 1.8rem;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .contact {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+
+  .teacher-id {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── Sections ── */
+  section { margin-bottom: 2rem; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Profile */
+  .profile p {
+    font-size: 0.93rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  /* Bullet lists */
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .bullet-list li {
+    font-size: 0.875rem;
+    padding: 0.22rem 0 0.22rem 1.2rem;
+    position: relative;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .bullet-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-weight: 400;
+  }
+
+  /* Jobs / Education entries */
+  .entry {
+    margin-bottom: 1.25rem;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .entry-title {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .entry-org {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+
+  .entry-date {
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .entry-sub {
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0.35rem 0 0.3rem;
+  }
+
+  .entry > .bullet-list {
+    margin-top: 0.3rem;
+  }
+
+  /* Skills grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 2rem;
+  }
+
+  .skill-row {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .skill-label {
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  /* Language bar */
+  .lang-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .lang-name { font-weight: 500; min-width: 80px; }
+  .lang-level { color: var(--muted); font-style: italic; }
+
+  /* Print */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 2rem 2.5rem; }
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 2rem 1.5rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header>
+    <h1>Scott R. Hauser</h1>
+    <div class="contact">
+      318 Santa Fe Ct, Trenton, NJ 08619 &nbsp;·&nbsp;
+      <a href="tel:6463798000">646-379-8000</a> &nbsp;·&nbsp;
+      <a href="mailto:hauserscottrobert@gmail.com">hauserscottrobert@gmail.com</a>
+    </div>
+    <span class="teacher-id">Teacher ID: 4534108 &nbsp;|&nbsp; NYC Teaching Fellows — Cohort 40</span>
+  </header>
+
+  <!-- Professional Profile -->
+  <section class="profile">
+    <div class="section-title">Professional Profile</div>
+    <p>Bilingual Spanish-English career changer and NYC Teaching Fellows Cohort 40 Transitional B Candidate pursuing Spanish 7–12 certification. Experienced in individualized bilingual instruction, special needs education, and youth mentorship across diverse cultural settings. Advanced Spanish proficiency developed through decades of immersive engagement across the Spanish-speaking world. EAS passed; all NYSED mandatory workshops complete; fingerprinting cleared.</p>
+  </section>
+
+  <!-- Certification & Licensure -->
+  <section>
+    <div class="section-title">Certification &amp; Licensure — New York State</div>
+    <ul class="bullet-list">
+      <li>NYC Teaching Fellows — Cohort 40, accepted Summer 2026 | Pursuing Initial Certificate: Spanish (Grades 7–12)</li>
+      <li>Educating All Students (EAS) — <strong>PASSED</strong> (03/19/2026)</li>
+      <li>Content Specialty Exam: Spanish — awaiting results</li>
+      <li>Mandatory Workshops completed (02/2026): School Violence Intervention &amp; Prevention · Autism Awareness · Child Abuse Identification · Dignity for All Students Act (DASA)</li>
+      <li>NYSED Fingerprinting: DCJS &amp; FBI clearance received</li>
+    </ul>
+  </section>
+
+  <!-- Direct Youth Experience -->
+  <section>
+    <div class="section-title">Direct Youth Experience</div>
+    <ul class="bullet-list">
+      <li>Homeschooled bilingual son with autism — designed and delivered 4 hours of daily individualized instruction in English and Spanish over 2+ years, coordinating ABA, speech, OT and music therapy interventions; successfully transitioned student into a specialized school program</li>
+      <li>Provided one-on-one academic tutoring in Spanish to 3 family members (niece and nephews) in Mexico — subjects included mathematics, nutrition, English and reading comprehension</li>
+      <li>BT Playmaker qualification — England Football (February 2022) · Trained U-14 boys' soccer (8 players) in Mexico, January 2023 — instruction conducted primarily in Spanish</li>
+      <li>USA Soccer Safe Soccer certification (November 2023)</li>
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <div class="section-title">Education</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Bachelor of Arts — Spanish &amp; International Business</span>
+        <span class="entry-date">Awarded Aug 2008</span>
+      </div>
+      <div class="entry-org">Georgia State University &nbsp;·&nbsp; Atlanta, GA</div>
+      <ul class="bullet-list" style="margin-top:0.4rem">
+        <li>Overall GPA: 3.46 | Dean's List &amp; Faculty Scholar (multiple terms) | 135 credit hours</li>
+        <li>Advanced coursework through SPAN 4000-level: Linguistics, Literary Texts, Translation Techniques, Advanced Grammar I &amp; II, Culture &amp; Civilization</li>
+        <li>Language breadth: Spanish (4000-level), Portuguese (2000-level), Italian (2000-level), French (2000-level), Linguistics of World Languages</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Certificate — Film (Summer Intensive)</span>
+        <span class="entry-date">1996</span>
+      </div>
+      <div class="entry-org">New York University &nbsp;·&nbsp; New York, NY</div>
+    </div>
+  </section>
+
+  <!-- Language Proficiency -->
+  <section>
+    <div class="section-title">Language Proficiency</div>
+    <div class="lang-row"><span class="lang-name">Spanish</span><span class="lang-level">Advanced (professional / academic)</span></div>
+    <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Native</span></div>
+  </section>
+
+  <!-- Transferable Professional Experience -->
+  <section>
+    <div class="section-title">Transferable Professional Experience</div>
+
+    <div class="entry">
+      <div class="entry-sub">Mentorship &amp; Training Experience — Career-Wide</div>
+      <ul class="bullet-list">
+        <li>Mentored and trained 15+ assistants, interns, and junior staff across 2 decades — graduates went on to positions at Apple (Cupertino), Netflix, FX Network; maintained 100% on-time project delivery throughout career</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Applied Researcher — AI, Language &amp; Human Experience</span>
+        <span class="entry-date">2018–Present</span>
+      </div>
+      <div class="entry-org">Happy Machines and Humans &nbsp;·&nbsp; Princeton, NJ</div>
+      <div class="entry-sub">Content Creation &amp; Academic Support</div>
+      <ul class="bullet-list">
+        <li>Developed AI-assisted workflows and prompt engineering frameworks — positioned to bring authentic, critical digital literacy into the Spanish classroom</li>
+        <li>Wrote and edited bilingual content, scripts, and articles, demonstrating advanced written command of English and Spanish</li>
+        <li>Applied lyric composition as instructional tools for language structure, creative literacy, and engagement — demonstrating how authentic creative expression can deepen language learning</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Senior VFX Editor / Team Lead</span>
+        <span class="entry-date">2009–2018</span>
+      </div>
+      <div class="entry-org">Flying Colors Media &nbsp;·&nbsp; Tulsa, OK</div>
+      <div class="entry-sub">Leadership, Feedback &amp; Cross-Cultural Collaboration</div>
+      <ul class="bullet-list">
+        <li>Led diverse creative teams across high-stakes, deadline-driven projects — building the classroom-ready skills of calmness, adaptability, and constructive feedback</li>
+        <li>Collaborated with Members of government, U.S. Senators, and non-profit organizations on communications requiring cultural sensitivity and precise, purposeful language; worked directly with The Cherokee Nation</li>
+        <li>Provided consistent, growth-oriented feedback to developing editors and artists, refining the ability to guide learners without discouraging effort</li>
+        <li>Managed client relationships across healthcare, university, and legal sectors — sharpening communication across audiences and expertise levels</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Visual Effects Editor</span>
+        <span class="entry-date">1998–2007</span>
+      </div>
+      <div class="entry-org">Company 3 (formerly R!ot) &nbsp;·&nbsp; Atlanta, GA</div>
+      <div class="entry-sub">Precision, Storytelling &amp; Cultural Awareness</div>
+      <ul class="bullet-list">
+        <li>Designed, edited and produced broadcast content for major networks (TNT, TBS, ESPN, CBS, Cartoon Network) requiring meticulous attention to detail and consistent quality — skills transferable to academic rigor</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Additional Skills -->
+  <section>
+    <div class="section-title">Additional Skills &amp; Competencies</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Instructional Tech: </span>Canvas LMS · Google Workspace · Microsoft Office</div>
+      <div class="skill-row"><span class="skill-label">Coding &amp; Logic: </span>HTML/CSS · Python (basics) · Shell scripting · GitHub</div>
+      <div class="skill-row"><span class="skill-label">Creative Writing: </span>Original lyricist · Academic writing · Long-form narrative &amp; script</div>
+      <div class="skill-row"><span class="skill-label">Media: </span>Adobe Creative Suite · Ableton Live</div>
+    </div>
+  </section>
+
+  <!-- Hispanic / Latino Cultural Engagement -->
+  <section>
+    <div class="section-title">Hispanic / Latino Cultural Engagement</div>
+    <ul class="bullet-list">
+      <li>Resided in Mexico on three separate occasions — all aspects of daily life conducted in Spanish including medical, dental, academic and professional contexts</li>
+      <li>Designed presentation materials for academic work delivered in Spanish on Latin American music, identity, and cultural resistance</li>
+      <li>Attendee, XXXIX Congreso Internacional de Literatura y Estudios Hispánicos — Madrid, Spain, June 2025; academic conference conducted in Spanish on Hispanic literary and cultural studies</li>
+      <li>Attendee, Twenty-Sixth International Conference on Diversity in Organizations, Communities &amp; Nations — UNAM, Mexico City, May 2026</li>
+      <li>Documented cultural institutions, museums, and community spaces across Argentina, Chile, the Dominican Republic, Guatemala, and Spain</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>
