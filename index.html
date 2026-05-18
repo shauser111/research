@@ -186,6 +186,23 @@
   .lang-name { font-weight: 500; min-width: 80px; }
   .lang-level { color: var(--muted); font-style: italic; }
 
+  /* Download button */
+  .download-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.45rem 1.2rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.2s;
+  }
+  .download-btn:hover { background: #1a3050; }
+
   /* Print */
   @media print {
     body { background: white; padding: 0; }
@@ -211,6 +228,9 @@
       <a href="mailto:hauserscottrobert@gmail.com">hauserscottrobert@gmail.com</a>
     </div>
     <span class="teacher-id">Teacher ID: 4534108 &nbsp;|&nbsp; NYC Teaching Fellows — Cohort 40</span>
+    <div style="margin-top:1rem;">
+      <a class="download-btn" href="ScottHauser_Resume.pdf" download>⬇ Download PDF</a>
+    </div>
   </header>
 
   <!-- Professional Profile -->
@@ -291,7 +311,7 @@
         <span class="entry-title">Applied Researcher — AI, Language &amp; Human Experience</span>
         <span class="entry-date">2018–Present</span>
       </div>
-      <div class="entry-org">Happy Machines and Humans &nbsp;·&nbsp; Princeton, NJ</div>
+      <div class="entry-org"><a href="https://happymachinesandhumans.com" target="_blank" style="color:var(--accent);">Happy Machines and Humans</a> &nbsp;·&nbsp; Princeton, NJ</div>
       <div class="entry-sub">Content Creation &amp; Academic Support</div>
       <ul class="bullet-list">
         <li>Developed AI-assisted workflows and prompt engineering frameworks — positioned to bring authentic, critical digital literacy into the Spanish classroom</li>
@@ -320,7 +340,7 @@
         <span class="entry-title">Visual Effects Editor</span>
         <span class="entry-date">1998–2007</span>
       </div>
-      <div class="entry-org">Company 3 (formerly R!ot) &nbsp;·&nbsp; Atlanta, GA</div>
+      <div class="entry-org"><a href="https://www.company3.com/" target="_blank" style="color:var(--accent);">Company 3 (formerly R!ot)</a> &nbsp;·&nbsp; Atlanta, GA</div>
       <div class="entry-sub">Precision, Storytelling &amp; Cultural Awareness</div>
       <ul class="bullet-list">
         <li>Designed, edited and produced broadcast content for major networks (TNT, TBS, ESPN, CBS, Cartoon Network) requiring meticulous attention to detail and consistent quality — skills transferable to academic rigor</li>
